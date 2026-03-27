@@ -1,0 +1,375 @@
+.vessels {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.vessels-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vessels-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.vessels-header h1 {
+  color: #1f2937;
+  font-size: 28px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+.btn-secondary {
+  background: #374151;
+  color: white;
+  border: 1px solid #4b5563;
+}
+
+.btn-secondary:hover {
+  background: #4b5563;
+}
+
+.vessels-main {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+}
+
+.vessels-sidebar {
+  width: 280px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  height: fit-content;
+  border: 1px solid #e5e7eb;
+}
+
+.search-section {
+  margin-bottom: 25px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.filter-section {
+  margin-bottom: 30px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  color: #374151;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.fleet-section h3 {
+  color: #1f2937;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.fleet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fleet-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.fleet-item:hover {
+  background: #ffffff;
+  border-color: #d1d5db;
+}
+
+.fleet-item.active {
+  background: #3b82f6;
+  border-color: #2563eb;
+}
+
+.fleet-icon {
+  font-size: 16px;
+  width: 24px;
+  text-align: center;
+}
+
+.fleet-item span:not(.fleet-icon):not(.fleet-count) {
+  color: #1f2937;
+  font-size: 14px;
+  flex: 1;
+  font-weight: 500;
+}
+
+.fleet-item.active span:not(.fleet-icon):not(.fleet-count) {
+  color: #ffffff;
+}
+
+.fleet-count {
+  background: #e5e7eb;
+  color: #374151;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.fleet-item.active .fleet-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.vessels-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  align-content: start;
+}
+
+.vessel-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.vessel-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.vessel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.vessel-name-section {
+  flex: 1;
+}
+
+.vessel-name-section h3 {
+  color: #1f2937;
+  font-size: 16px;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+}
+
+.vessel-status {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vessel-status.active {
+  background: #10b981;
+  color: white;
+}
+
+.vessel-status.in-port {
+  background: #f59e0b;
+  color: white;
+}
+
+.vessel-status.sailing {
+  background: #3b82f6;
+  color: white;
+}
+
+.vessel-status.maintenance {
+  background: #ef4444;
+  color: white;
+}
+
+.vessel-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.action-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-btn {
+  background: #f8fafc;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+.view-btn:hover {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.edit-btn {
+  background: #3b82f6;
+  color: white;
+  border: 1px solid #3b82f6;
+}
+
+.edit-btn:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.vessel-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.detail-value {
+  color: #1f2937;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .vessels-main {
+    flex-direction: column;
+  }
+  
+  .vessels-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .vessels-list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .vessels-content {
+    padding: 15px;
+  }
+  
+  .vessels-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .vessels-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .vessel-card {
+    padding: 15px;
+  }
+}

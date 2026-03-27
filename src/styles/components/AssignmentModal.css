@@ -1,0 +1,238 @@
+.assignment-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.assignment-modal-container {
+  background: white;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb;
+}
+
+.assignment-modal-header {
+  background: #667eea;
+  color: white;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.assignment-modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.assignment-close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assignment-close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.assignment-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+  background: #ffffff;
+}
+
+.assignment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.assignment-form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.assignment-form-section {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.assignment-form-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.assignment-form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.assignment-form-row:last-child {
+  margin-bottom: 0;
+}
+
+.assignment-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.assignment-form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.assignment-form-group input,
+.assignment-form-group select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background: white;
+  color: #1f2937;
+  transition: border-color 0.2s ease;
+}
+
+.assignment-form-group input:focus,
+.assignment-form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.assignment-form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.assignment-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px 24px;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.assignment-btn-cancel,
+.assignment-btn-submit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.assignment-btn-cancel {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.assignment-btn-cancel:hover {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.assignment-btn-submit {
+  background: #667eea;
+  color: white;
+  border: 1px solid #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.assignment-btn-submit:hover {
+  background: #5a67d8;
+  border-color: #5a67d8;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .assignment-modal-container {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .assignment-modal-header {
+    padding: 15px 20px;
+  }
+  
+  .assignment-modal-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .assignment-modal-body {
+    padding: 20px;
+  }
+  
+  .assignment-form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .assignment-modal-container {
+    width: 98%;
+    border-radius: 8px;
+  }
+  
+  .assignment-modal-header {
+    padding: 12px 15px;
+  }
+  
+  .assignment-modal-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .assignment-modal-body {
+    padding: 15px;
+  }
+  
+  .assignment-form-section {
+    padding: 15px;
+  }
+  
+  .assignment-modal-actions {
+    flex-direction: column;
+  }
+  
+  .assignment-btn-cancel,
+  .assignment-btn-submit {
+    width: 100%;
+  }
+}

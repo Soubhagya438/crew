@@ -1,0 +1,126 @@
+.admin {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.admin-content {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
+}
+
+.admin-empty {
+  text-align: center;
+  background: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.admin-empty h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.admin-empty p {
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.add-seafarer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.add-seafarer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .admin-content {
+    padding: 20px;
+  }
+  
+  .admin-empty {
+    padding: 40px 25px;
+    max-width: 350px;
+  }
+  
+  .empty-icon {
+    font-size: 3rem;
+  }
+  
+  .admin-empty h2 {
+    font-size: 1.5rem;
+  }
+  
+  .admin-empty p {
+    font-size: 1rem;
+  }
+  
+  .add-seafarer-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-content {
+    padding: 15px;
+  }
+  
+  .admin-empty {
+    padding: 30px 20px;
+    max-width: 300px;
+  }
+  
+  .empty-icon {
+    font-size: 2.5rem;
+  }
+  
+  .admin-empty h2 {
+    font-size: 1.3rem;
+  }
+  
+  .admin-empty p {
+    font-size: 0.95rem;
+  }
+  
+  .add-seafarer-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
